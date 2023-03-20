@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Compra de Boletos de Avión</title>
+  </head>
+  <body>
+    <h1>Compra de Boletos de Avión</h1>
+    <form onsubmit="return validarFecha()">
+      <label for="flightTypeSelect">Tipo de Vuelo:</label>
+      <select id="flightTypeSelect">
+        <option value="">-- Seleccione una opción --</option>
+        <option value="Ida">Ida</option>
+        <option value="Ida y Vuelta">Ida y Vuelta</option>
+      </select>
+      <br />
+      <label for="departureDateInput">Fecha de Ida:</label>
+      <input type="date" id="departureDateInput" />
+      <br />
+      <div id="returnDateDiv" style="display:none">
+        <label for="returnDateInput">Fecha de Regreso:</label>
+        <input type="date" id="returnDateInput" />
+        <br />
+      </div>
+      <label for="ticketCountInput">Cantidad de Boletos:</label>
+      <input type="number" id="ticketCountInput" min="1" max="5" />
+      <br>
+      <label for="asientos">Selecciona los asientos para cada boleto:</label>
+      <br>
+      <div id="asientos-selects"></div>
+      
+      <br />
+  
+      <br />
+      <label for="firstNameInput">Nombre:</label>
+      <input type="text" id="firstNameInput" />
+      <br />
+      <label for="lastNameInput">Apellido:</label>
+      <input type="text" id="lastNameInput" />
+      <br />
+      <label for="idNumberInput">Número de Identidad:</label>
+      <input type="text" id="idNumberInput" />
+      <br />
+      <button type="submit" id="buyButton" >Comprar</button>
+    </form>
+    <div id="receiptDiv"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
